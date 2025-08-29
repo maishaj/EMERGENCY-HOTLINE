@@ -70,4 +70,25 @@ document.getElementById("clr-btn")
    callHisParent.innerText="";
 })
 
+//Copy-functionality
+const Allbtns=document.getElementsByClassName("copy-btn");
+for(const a of Allbtns)
+{
+    a.addEventListener('click',function(){
+        let par=a.parentNode.parentNode;
+        let hotlineNum=par.querySelector(".hotline").innerText;
+        navigator.clipboard.writeText(hotlineNum)
+        .then(()=>{
+            alert("Copied hotline: " + hotlineNum);
+        })
+
+        let CopyCount=document.getElementById("copy-count");
+        z=CopyCount.innerText;
+        z++;
+        CopyCount.innerText=z;
+    })
+}
+
+
+
 
