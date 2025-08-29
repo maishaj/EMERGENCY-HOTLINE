@@ -41,13 +41,12 @@ for(const call of calls)
             sNum:number[0].innerText,
             sDate:new Date().toLocaleTimeString()
         }
-
-        console.log(data);
         call_list.push(data);
 
 
         callHisParent=document.getElementById("history");
         callHisParent.innerText="";
+
         for(const a of call_list)
         {
             const div=document.createElement("div");
@@ -64,3 +63,11 @@ for(const call of calls)
         }
     })
 }
+
+//Clear Functionality
+document.getElementById("clr-btn")
+.addEventListener('click',function(){
+   callHisParent.innerText="";
+})
+
+
