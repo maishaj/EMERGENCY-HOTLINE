@@ -13,7 +13,6 @@ for(const heart of hearts)
 }
 
 //Call Buttons
-
 let calls=document.getElementsByClassName("call-btns");
 
 for(const call of calls)
